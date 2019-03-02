@@ -1818,6 +1818,10 @@ public:
 		previousCalls.push_back(&call);
 		return *this;
 	}
+	TCall<Y,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P> &Times(int num) {
+		expectation = RegistrationType(num, num);
+		return *this;
+	}
 	template <typename T>
 	TCall<Y,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P> &Do(T function) { functor = new DoWrapper<T,Y,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P>(function); return *this; }
 	template <typename T>
@@ -1862,6 +1866,10 @@ public:
 	}
 	TCall<void,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P> &After(Call &call) {
 		previousCalls.push_back(&call);
+		return *this;
+	}
+	TCall<void,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P> &Times(int num) {
+		expectation = RegistrationType(num, num);
 		return *this;
 	}
 	template <typename T>
@@ -1910,6 +1918,10 @@ public:
 		previousCalls.push_back(&call);
 		return *this;
 	}
+	TCall<Y,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
+		return *this;
+	}
 	template <typename T>
 	TCall<Y,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,NullType> &Do(T function) { functor = new DoWrapper<T,Y,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,NullType>(function); return *this; }
 	template <typename T>
@@ -1954,6 +1966,10 @@ public:
 	}
 	TCall<void,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,NullType> &After(Call &call) {
 		previousCalls.push_back(&call);
+		return *this;
+	}
+	TCall<void,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
 		return *this;
 	}
 	template <typename T>
@@ -2002,6 +2018,10 @@ public:
 		previousCalls.push_back(&call);
 		return *this;
 	}
+	TCall<Y,A,B,C,D,E,F,G,H,I,J,K,L,M,N,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
+		return *this;
+	}
 	template <typename T>
 	TCall<Y,A,B,C,D,E,F,G,H,I,J,K,L,M,N,NullType,NullType> &Do(T function) { functor = new DoWrapper<T,Y,A,B,C,D,E,F,G,H,I,J,K,L,M,N,NullType,NullType>(function); return *this; }
 	template <typename T>
@@ -2046,6 +2066,10 @@ public:
 	}
 	TCall<void,A,B,C,D,E,F,G,H,I,J,K,L,M,N,NullType,NullType> &After(Call &call) {
 		previousCalls.push_back(&call);
+		return *this;
+	}
+	TCall<void,A,B,C,D,E,F,G,H,I,J,K,L,M,N,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
 		return *this;
 	}
 	template <typename T>
@@ -2094,6 +2118,10 @@ public:
 		previousCalls.push_back(&call);
 		return *this;
 	}
+	TCall<Y,A,B,C,D,E,F,G,H,I,J,K,L,M,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
+		return *this;
+	}
 	template <typename T>
 	TCall<Y,A,B,C,D,E,F,G,H,I,J,K,L,M,NullType,NullType,NullType> &Do(T function) { functor = new DoWrapper<T,Y,A,B,C,D,E,F,G,H,I,J,K,L,M,NullType,NullType,NullType>(function); return *this; }
 	template <typename T>
@@ -2140,6 +2168,10 @@ public:
 		previousCalls.push_back(&call);
 		return *this;
 	}
+	TCall<void,A,B,C,D,E,F,G,H,I,J,K,L,M,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
+		return *this;
+	}
 	template <typename T>
 	TCall<void,A,B,C,D,E,F,G,H,I,J,K,L,M,NullType,NullType,NullType> &Do(T function) { functor = new DoWrapper<T,void,A,B,C,D,E,F,G,H,I,J,K,L,M,NullType,NullType,NullType>(function); return *this; }
 	template <typename T>
@@ -2182,6 +2214,10 @@ public:
 	}
 	TCall<Y,A,B,C,D,E,F,G,H,I,J,K,L,NullType,NullType,NullType,NullType> &After(Call &call) {
 		previousCalls.push_back(&call);
+		return *this;
+	}
+	TCall<Y,A,B,C,D,E,F,G,H,I,J,K,L,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
 		return *this;
 	}
 	template <typename T>
@@ -2228,6 +2264,10 @@ public:
 		previousCalls.push_back(&call);
 		return *this;
 	}
+	TCall<void,A,B,C,D,E,F,G,H,I,J,K,L,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
+		return *this;
+	}
 	template <typename T>
 	TCall<void,A,B,C,D,E,F,G,H,I,J,K,L,NullType,NullType,NullType,NullType> &Do(T function) { functor = new DoWrapper<T,void,A,B,C,D,E,F,G,H,I,J,K,L,NullType,NullType,NullType,NullType>(function); return *this; }
 	template <typename T>
@@ -2270,6 +2310,10 @@ public:
 	}
 	TCall<Y,A,B,C,D,E,F,G,H,I,J,K,NullType,NullType,NullType,NullType,NullType> &After(Call &call) {
 		previousCalls.push_back(&call);
+		return *this;
+	}
+	TCall<Y,A,B,C,D,E,F,G,H,I,J,K,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
 		return *this;
 	}
 	template <typename T>
@@ -2316,6 +2360,10 @@ public:
 		previousCalls.push_back(&call);
 		return *this;
 	}
+	TCall<void,A,B,C,D,E,F,G,H,I,J,K,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
+		return *this;
+	}
 	template <typename T>
 	TCall<void,A,B,C,D,E,F,G,H,I,J,K,NullType,NullType,NullType,NullType,NullType> &Do(T function) { functor = new DoWrapper<T,void,A,B,C,D,E,F,G,H,I,J,K,NullType,NullType,NullType,NullType,NullType>(function); return *this; }
 	template <typename T>
@@ -2358,6 +2406,10 @@ public:
 	}
 	TCall<Y,A,B,C,D,E,F,G,H,I,J,NullType,NullType,NullType,NullType,NullType,NullType> &After(Call &call) {
 		previousCalls.push_back(&call);
+		return *this;
+	}
+	TCall<Y,A,B,C,D,E,F,G,H,I,J,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
 		return *this;
 	}
 	template <typename T>
@@ -2404,6 +2456,10 @@ public:
 		previousCalls.push_back(&call);
 		return *this;
 	}
+	TCall<void,A,B,C,D,E,F,G,H,I,J,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
+		return *this;
+	}
 	template <typename T>
 	TCall<void,A,B,C,D,E,F,G,H,I,J,NullType,NullType,NullType,NullType,NullType,NullType> &Do(T function) { functor = new DoWrapper<T,void,A,B,C,D,E,F,G,H,I,J,NullType,NullType,NullType,NullType,NullType,NullType>(function); return *this; }
 	template <typename T>
@@ -2446,6 +2502,10 @@ public:
 	}
 	TCall<Y,A,B,C,D,E,F,G,H,I,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &After(Call &call) {
 		previousCalls.push_back(&call);
+		return *this;
+	}
+	TCall<Y,A,B,C,D,E,F,G,H,I,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
 		return *this;
 	}
 	template <typename T>
@@ -2492,6 +2552,10 @@ public:
 		previousCalls.push_back(&call);
 		return *this;
 	}
+	TCall<void,A,B,C,D,E,F,G,H,I,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
+		return *this;
+	}
 	template <typename T>
 	TCall<void,A,B,C,D,E,F,G,H,I,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Do(T function) { functor = new DoWrapper<T,void,A,B,C,D,E,F,G,H,I,NullType,NullType,NullType,NullType,NullType,NullType,NullType>(function); return *this; }
 	template <typename T>
@@ -2532,6 +2596,10 @@ public:
 	}
 	TCall<Y,A,B,C,D,E,F,G,H,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &After(Call &call) {
 		previousCalls.push_back(&call);
+		return *this;
+	}
+	TCall<Y,A,B,C,D,E,F,G,H,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
 		return *this;
 	}
 	template <typename T>
@@ -2576,6 +2644,10 @@ public:
 		previousCalls.push_back(&call);
 		return *this;
 	}
+	TCall<void,A,B,C,D,E,F,G,H,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
+		return *this;
+	}
 	template <typename T>
 	TCall<void,A,B,C,D,E,F,G,H,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Do(T function) { functor = new DoWrapper<T,void,A,B,C,D,E,F,G,H,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType>(function); return *this; }
 	template <typename T>
@@ -2616,6 +2688,10 @@ public:
 	}
 	TCall<Y,A,B,C,D,E,F,G,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &After(Call &call) {
 		previousCalls.push_back(&call);
+		return *this;
+	}
+	TCall<Y,A,B,C,D,E,F,G,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
 		return *this;
 	}
 	template <typename T>
@@ -2660,6 +2736,10 @@ public:
 		previousCalls.push_back(&call);
 		return *this;
 	}
+	TCall<void,A,B,C,D,E,F,G,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
+		return *this;
+	}
 	template <typename T>
 	TCall<void,A,B,C,D,E,F,G,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Do(T function) { functor = new DoWrapper<T,void,A,B,C,D,E,F,G,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType>(function); return *this; }
 	template <typename T>
@@ -2700,6 +2780,10 @@ public:
 	}
 	TCall<Y,A,B,C,D,E,F,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &After(Call &call) {
 		previousCalls.push_back(&call);
+		return *this;
+	}
+	TCall<Y,A,B,C,D,E,F,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
 		return *this;
 	}
 	template <typename T>
@@ -2744,6 +2828,10 @@ public:
 		previousCalls.push_back(&call);
 		return *this;
 	}
+	TCall<void,A,B,C,D,E,F,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
+		return *this;
+	}
 	template <typename T>
 	TCall<void,A,B,C,D,E,F,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Do(T function) { functor = new DoWrapper<T,void,A,B,C,D,E,F,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType>(function); return *this; }
 	template <typename T>
@@ -2784,6 +2872,10 @@ public:
 	}
 	TCall<Y,A,B,C,D,E,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &After(Call &call) {
 		previousCalls.push_back(&call);
+		return *this;
+	}
+	TCall<Y,A,B,C,D,E,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
 		return *this;
 	}
 	template <typename T>
@@ -2828,6 +2920,10 @@ public:
 		previousCalls.push_back(&call);
 		return *this;
 	}
+	TCall<void,A,B,C,D,E,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
+		return *this;
+	}
 	template <typename T>
 	TCall<void,A,B,C,D,E,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Do(T function) { functor = new DoWrapper<T,void,A,B,C,D,E,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType>(function); return *this; }
 	template <typename T>
@@ -2866,6 +2962,10 @@ public:
 	}
 	TCall<Y,A,B,C,D,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &After(Call &call) {
 		previousCalls.push_back(&call);
+		return *this;
+	}
+	TCall<Y,A,B,C,D,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
 		return *this;
 	}
 	template <typename T>
@@ -2908,6 +3008,10 @@ public:
 		previousCalls.push_back(&call);
 		return *this;
 	}
+	TCall<void,A,B,C,D,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
+		return *this;
+	}
 	template <typename T>
 	TCall<void,A,B,C,D,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Do(T function) { functor = new DoWrapper<T,void,A,B,C,D,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType>(function); return *this; }
 	template <typename T>
@@ -2946,6 +3050,10 @@ public:
 	}
 	TCall<Y,A,B,C,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &After(Call &call) {
 		previousCalls.push_back(&call);
+		return *this;
+	}
+	TCall<Y,A,B,C,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
 		return *this;
 	}
 	template <typename T>
@@ -2988,6 +3096,10 @@ public:
 		previousCalls.push_back(&call);
 		return *this;
 	}
+	TCall<void,A,B,C,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
+		return *this;
+	}
 	template <typename T>
 	TCall<void,A,B,C,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Do(T function) { functor = new DoWrapper<T,void,A,B,C,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType>(function); return *this; }
 	template <typename T>
@@ -3026,6 +3138,10 @@ public:
 	}
 	TCall<Y,A,B,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &After(Call &call) {
 		previousCalls.push_back(&call);
+		return *this;
+	}
+	TCall<Y,A,B,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
 		return *this;
 	}
 	template <typename T>
@@ -3068,6 +3184,10 @@ public:
 		previousCalls.push_back(&call);
 		return *this;
 	}
+	TCall<void,A,B,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
+		return *this;
+	}
 	template <typename T>
 	TCall<void,A,B,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Do(T function) { functor = new DoWrapper<T,void,A,B,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType>(function); return *this; }
 	template <typename T>
@@ -3106,6 +3226,10 @@ public:
 	}
 	TCall<Y,A,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &After(Call &call) {
 		previousCalls.push_back(&call);
+		return *this;
+	}
+	TCall<Y,A,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
 		return *this;
 	}
 	template <typename T>
@@ -3148,6 +3272,10 @@ public:
 		previousCalls.push_back(&call);
 		return *this;
 	}
+	TCall<void,A,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
+		return *this;
+	}
 	template <typename T>
 	TCall<void,A,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Do(T function) { functor = new DoWrapper<T,void,A,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType>(function); return *this; }
 	template <typename T>
@@ -3176,6 +3304,10 @@ public:
 		previousCalls.push_back(&call);
 		return *this;
 	}
+	TCall<Y,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
+		return *this;
+	}
 	template <typename T>
 	TCall<Y,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Do(T function) { functor = new DoWrapper<T,Y,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType>(function); return *this; }
 	Call &Return(Y obj) { retVal = new ReturnValueWrapperCopy<Y>(obj); return *this; }
@@ -3201,6 +3333,10 @@ public:
 	void assignArgs(base_tuple &) { }
 	TCall<void,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &After(Call &call) {
 		previousCalls.push_back(&call);
+		return *this;
+	}
+	TCall<void,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType,NullType> &Times(int num) {
+		expectation = RegistrationType(num, num);
 		return *this;
 	}
 	template <typename T>
